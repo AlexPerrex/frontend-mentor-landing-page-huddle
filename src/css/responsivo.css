@@ -1,56 +1,92 @@
 @media (max-width:375px) {
  body{
-    display: flex;
-    flex-direction: column;
-    background: url(../images/bg-mobile.svg) no-repeat center center;
+    display: grid;
+    grid-template-areas: 'header'
+                         'main'
+                         'rede-social';
+    background: url(../images/bg-mobile.svg) center center no-repeat;
     background-size: cover;
     background-color: hsl(257, 40%, 49%);
 }
 
-.header {
+.header{
+    grid-area: header;
     width: 100%;
-    height: 4.0rem;
+    height: 10.0rem;
     display: flex;
-    align-items: center;
-    position: relative;
-    top: 2.0rem;
-    right: 2.0rem;
+    align-items: flex-start;
 }
 
 .header img {
     width: 10.0rem;
-    margin-left: 2.0rem
+    margin: 2.0rem;
 }
 
-.container {
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: 4.0rem;
-}
-
-.container img {
-    width: 90%;
-    position: relative;
-    left: 0;
-}
-
-.container div{
+.container{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    min-height:100vh;
     width: 100%;
 }
 
-.container div h1 {
-    font-size: 2.0rem;
-    margin-top: 2.0rem;
+.container .banner {
+    width: 100vw;
+    height: 7.0rem;
 }
 
-.container div .btn{
-    margin: 2.0rem auto;
+.container img {
+    width: 85vw;
+text-align: center;
 }
+
+    .container .slogan{
+    width: 100vw;
+    text-align: center;
+    }
+
+    .container .slogan h1{
+    font-size: 1.5rem;
+    }
+
+    .container .slogan p{
+    font-size: 1.0rem;
+}
+
+    .container .slogan .btn{
+    margin: 0 auto;
+    margin-top: 2.0rem;
+    width: 18.0rem;
+    height: 3.0rem;
+    font-size: 1.0rem;
+    }
+
+    .rede-social{
+    grid-area: rede-social;
+    display: flex;
+    justify-content: center;
+    width: 130%;
+    height: 200px;
+}
+
+.rede-social div{
+
+}
+
+.rede-social a{
+    width: 2.0rem;
+    height: 2.0rem;
+    margin: 10px;
+    
+}
+
+.rede-social a i{
+    font-size: 1.0rem;
+    
+    margin: 0 1.0rem;
+}
+
+
 
 } 
